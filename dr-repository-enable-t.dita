@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//Nutanix//DTD DITA Nutanix Task//EN" "ntnx-task.dtd">
 <task id="enable-dr-repository-t">
-    <title>Enabling High Availability for <ph conkeyref="ndb_product_info/product_name_short"
-         /></title>
+    <title>Enabling High Availability for NDB<ph conkeyref="ndb_product_info/product_name_short"
+        /></title>
     <prolog>
         <resourceid appid="admin/era/ha/enable" appname="prism_id" />
     </prolog>
