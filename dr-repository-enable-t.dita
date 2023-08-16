@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//Nutanix//DTD DITA Nutanix Task//EN" "ntnx-task.dtd">
+<task id="enable-dr-repository-t">
+    <title>Enabling High Availability for <ph conkeyref="ndb_product_info/product_name_short"
+         /></title>
+    <prolog>
+        <resourceid appid="admin/era/ha/enable" appname="prism_id" />
+    </prolog>
+    <taskbody>
+        <prereq id="prereq_fwz_5fk_3kb">Ensure that you have completed the following before enabling
+                <ph conkeyref="ndb_product_info/product_name_short" /> High Availability (HA).<ul>
+                <li>Ensure that network profiles have at least eight free IP addresses.<ul>
+                        <li>Two IP addresses for new API servers and three for PostgreSQL repository servers<p>
+                                <note>The existing <ph
+                                        conkeyref="ndb_product_info/product_name_short" /> server is
+                                    converted into an API server and continues using its current IP
+                                    address.</note>
+                            </p></li>
+                        <li>Two IP addresses for HA proxy VMs and one for HA proxy VIP</li>
+                    </ul></li>
+                <li>All the Nutanix clusters on which you want the HA nodes to be available must be
+                    registered with <ph conkeyref="ndb_product_info/product_name_short" />.</li>
+                <li>All the Nutanix clusters on which you want the HA VMs to be available must have
+                    the POSTGRES_10.4_HA_ENABLED_OOB profile.</li>
+                <li>Nutanix Guest Tools (NGT) must be installed on the <ph
+                        conkeyref="ndb_product_info/product_name_short" /> server for
+                    cross-hypervisor support (AHV to ESXi).</li>
+                <li><ph conkeyref="ndb_product_info/product_name_short" /> multi-cluster must be
+                    enabled. See <xref href="multicluster-enable-t.dita" /></li>
+            </ul></prereq>
+        <context>
+            <p>Perform the following procedure to enable High Availability for <ph
+                    conkeyref="ndb_product_info/product_name_short" />.</p>
+            <note type="caution">
+                <ul>
+                    <li>You cannot cancel or revert the operation to enable <ph
+                            conkeyref="ndb_product_info/product_name_short" /> HA once started.
+                        Similarly, <ph conkeyref="ndb_product_info/product_name_short" /> HA cannot
+                        be disabled once enabled. </li>
+                    <li>You cannot enable <ph conkeyref="ndb_product_info/product_name_short" /> HA
+                        if you have configured network segmentation for <ph
+                            conkeyref="ndb_product_info/product_name_short" />. Similarly, you
+                        cannot configure network segmentation for <ph
+                            conkeyref="ndb_product_info/product_name_short" /> if you enable <ph
+                            conkeyref="ndb_product_info/product_name_short" /> HA.</li>
+                </ul>
+            </note>
+        </context>
+        <steps>
+            <step>
+                <cmd>From the drop-down list of the main menu, select
+                        <uicontrol>Administration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <uicontrol><ph conkeyref="ndb_product_info/product_name_short" />
+                        Service</uicontrol> and click <uicontrol>Enable High
+                        Availability</uicontrol>. The window<wintitle>Enable Service HA</wintitle>
+                    appears. You enable HA in the following steps:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd><uicontrol>Nutanix Cluster</uicontrol></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><uicontrol><ph conkeyref="ndb_product_info/product_name_short" />
+                                VMs</uicontrol></cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Nutanix Cluster</uicontrol> step, do the following in the
+                    indicated fields:</cmd>
+                <substeps id="substeps_idm_wcq_tjb">
+                    <substep>
+                        <cmd>Select the Nutanix clusters to host the <ph
+                                conkeyref="ndb_product_info/product_name_short" /> VMs during a
+                            failover.</cmd>
+                        <info>
+                            <note>
+                                <ul>
+                                    <li><ph conkeyref="ndb_product_info/product_name_short" />
+                                        multi-cluster must be enabled to select different Nutanix
+                                        clusters. See <xref href="multicluster-management-c.dita" />
+                                        for more information.</li>
+                                    <li>Nutanix recommends selecting either one or three Nutanix
+                                        clusters to host the <ph
+                                            conkeyref="ndb_product_info/product_name_short" /> VMs.
+                                        Selecting two clusters for the same is not recommended.</li>
+                                </ul>
+                            </note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Next</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig>
+                        <title>Enabling High Availability : Nutanix Cluster Step</title>
+                        <image href="images/high-availability-enable.png">
+                            <alt />
+                        </image>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol><ph conkeyref="ndb_product_info/product_name_short" />
+                        VMs</uicontrol> step, do the following in the indicated fields:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd><uicontrol>Name Prefix</uicontrol>. Type a prefix for the <ph
+                                conkeyref="ndb_product_info/product_name_short" /> VM name.</cmd>
+                        <info>This field is optional. If you do not type a prefix, <ph
+                                conkeyref="ndb_product_info/product_name_short" /> automatically
+                            selects <userinput>NDB</userinput> as a default prefix name.</info>
+                    </substep>
+                    <substep>
+                        <cmd><uicontrol>Compute Profile</uicontrol>. Select a compute profile from
+                            the drop-down list of the compute profiles available.</cmd>
+                        <info>
+                            <note>Nutanix recommends a compute profile with memory greater than
+                                16GB.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd><uicontrol>Network Profile for API Server &amp; Repository</uicontrol>.
+                            Select a PostgreSQL HA network profile that contains VLANs for all the
+                            selected Nutanix clusters from the drop-down list available. This
+                            network profile will be used to host the API Server VMs and the
+                            Repository VMs.</cmd>
+                        <info>Select a profile with <ph
+                                conkeyref="ndb_product_info/product_name_short" />-managed VLANs. If
+                            you do not have a static VLAN, you can create one (For more information,
+                            see <xref href="resource-management-c.dita" />).<note>
+                                <ul>
+                                    <li>A HA instance network profile appears in the list only if
+                                        you have created the profile on the selected Nutanix
+                                        clusters. For information on creating a clustered network
+                                        profile, see <xref
+                                            href="https://portal.nutanix.com/page/documents/details?targetId=Nutanix-NDB-PostgreSQL-Database-Management-Guide:top-postgresql-cluster-database-provision-t.html"
+                                            format="html" scope="external">Creating a HA Instance
+                                            Network Profile</xref>.</li>
+                                    <li>Enabling <ph conkeyref="ndb_product_info/product_name_short"
+                                         /> High Availability does not require stretched VLANs.</li>
+                                </ul>
+                            </note></info>
+                    </substep>
+                    <substep>
+                        <cmd><uicontrol>Network Profile for HA Proxy</uicontrol>. Select a
+                            PostgreSQL HA network profile that will be used to host the HA Proxy
+                            VMs.</cmd>
+                        <info>
+                            <note>To host HA proxy VMs on different Nutanix clusters you must select
+                                a PostgreSQL HA network profile that contains a stretched VLAN. See
+                                    <xref
+                                    href="https://portal.nutanix.com/page/documents/details?targetId=Nutanix-NDB-PostgreSQL-Database-Management-Guide:top-postgresql-cluster-database-provision-t.html"
+                                    format="html" scope="external">Creating a HA Instance Network
+                                    Profile</xref>.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>All the VMs that are created as part of the operation are displayed
+                            under <uicontrol>Attributes of Individual <ph
+                                    conkeyref="ndb_product_info/product_name_short" />
+                                VMs</uicontrol>. The following types of VMs are created.</cmd>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Repository</uicontrol>. Runs the data persistence
+                                    layer of <ph conkeyref="ndb_product_info/product_name_short" />
+                                    control plane.</li>
+                                <li><uicontrol>API Server</uicontrol>. Stateless REST API gateway
+                                    for <ph conkeyref="ndb_product_info/product_name_short" />
+                                    control plane.</li>
+                                <li><uicontrol>HA Proxy</uicontrol>. Load balances access to API
+                                    servers and repository servers.</li>
+                            </ul>
+                        </info>
+                        <info>Select the Nutanix clusters for the respective VM types.</info>
+                    </substep>
+                    <substep>
+                        <cmd><uicontrol>Topology</uicontrol>. Displays a topological view of <ph
+                                conkeyref="ndb_product_info/product_name_short" /> High Availability
+                            structure consisting of the Nutanix clusters, API Server VMs, Repository
+                            VMs, and the HA Proxy VMs.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Enable High Availability</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig>
+                        <title>Enabling High Availability : <ph
+                                conkeyref="ndb_product_info/product_name_short" /> VMs Step</title>
+                        <image href="images/ha-enable-2.png" scale="75">
+                            <alt />
+                        </image>
+                    </fig>
+                </info>
+                <stepresult>A message indicating that an operation to enable <ph
+                        conkeyref="ndb_product_info/product_name_short" /> High Availability has
+                    started is displayed. Alternatively, select <uicontrol>Operations</uicontrol> in
+                    the drop-down list of the main menu to monitor the progress of the
+                        operation.<note>When the operation is in progress, <ph
+                            conkeyref="ndb_product_info/product_name_short" /> service goes down for
+                        a few minutes and all the user sessions are logged out.</note></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

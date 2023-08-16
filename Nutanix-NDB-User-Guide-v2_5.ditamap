@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+	<title> Nutanix Database Service Administration Guide</title>
+	<topicmeta>
+		<critdates>
+			<created date="2022-10-03" />
+		</critdates>
+		<permissions view="public" />
+		<category>Setup</category>
+		<prodinfo>
+			<prodname>Nutanix Database Service (formerly Era)</prodname>
+			<vrmlist>
+				<vrm version="2.5" />
+			</vrmlist>
+			<series>All</series>
+			<brand>Nutanix Database Service</brand>
+		</prodinfo>
+		<othermeta name="filter" content="../tech-content-tools/build/external.ditaval" />
+		<othermeta name="targets" content="pdf-ntnx html-json-ntnx" />
+		<othermeta name="call_to_action" content="https://www.nutanix.com/products/era" />
+	</topicmeta>
+	<topicgroup>
+		<keydef keys="version" processing-role="resource-only">
+			<topicmeta>
+				<keywords>
+					<keyword id="kw_software_version" />
+				</keywords>
+			</topicmeta>
+		</keydef>
+	</topicgroup>
+	<topicref href="topics-other/overview-c.dita">
+		<topicref href="topics-other/workflow-c.dita" />
+		<topicref href="topics-other/limitations-c.dita" />
+		<topicref href="topics-other/services-c.dita">
+			<topicref href="topics-other/provisioning-configuration-c.dita" />
+			<topicref href="topics-other/copy-data-management-c.dita" />
+			<topicref href="topics-other/database-protection-c.dita" />
+			<topicref href="topics-other/patching-c.dita" />
+		</topicref>
+		<topicref href="topics-other/terminology-reference-r.dita" />
+		<topicref href="topics-other/vm-configuration-and-scale-r.dita">
+			<topicref href="topics-other/vm-resource-modify-t.dita" />
+			<topicref href="topics-other/tomcat-config-modify-t.dita" />
+			<topicref href="topics-other/postgres-config-modify-t.dita" />
+			<topicref href="topics-other/log-config-modify-t.dita" />
+			<topicref href="topics-other/ndb-service-config-modify-t.dita" />
+			<topicref href="topics-other/ha-proxy-settings-modify-t.dita" />
+			<topicref href="topics-other/ndb-objects-integration-c.dita" audience="internal">
+				<topicref href="topics-other/objects-integration-cli-t.dita" />
+				<topicref href="topics-other/storage-resource-update-cli-t.dita" />
+				<topicref href="topics-other/storage-resource-remove-cli-t.dita" />
+				<topicref href="topics-other/objects-db-provision-cli-t.dita" />
+				<topicref href="topics-other/objects-db-register-cli-t.dita" />
+			</topicref>
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/installation-c.dita">
+		<topicref href="topics-other/requirements-r.dita" />
+		<topicref href="topics-other/installation-on-ahv-t.dita" />
+		<topicref href="topics-other/installation-on-esxi-t.dita" />
+	</topicref>
+	<topicref href="topics-other/installation-initial-configuration-c.dita">
+		<topicref href="topics-other/vm-static-IP-address-assign-t.dita" />
+		<topicref href="topics-other/ssl-certificate-install-t.dita" />
+		<topicref href="topics-other/log-in-t.dita" />
+		<topicref href="topics-other/version-check-t.dita" />
+		<topicref href="topics-other/language-settings-change-t.dita" />
+	</topicref>
+	<topicref href="topics-other/getting-started-c.dita">
+		<topicref href="topics-other/welcome-wizard-t.dita" />
+		<topicref href="topics-other/getting-started-profiles-c.dita" />
+		<topicref href="topics-other/getting-started-provision-t.dita" />
+	</topicref>
+	<topicref href="topics-other/dashboard-r.dita" />
+	<topicref href="topics-other/administration-c.dita">
+		<topicref href="topics-other/service-c.dita">
+			<topicref href="topics-other/disaster-recovery-c.dita">
+				<topicref href="topics-other/dr-repository-enable-t.dita" />
+			</topicref>
+			<topicref href="topics-other/service-resiliency-r.dita">
+				<topicref href="topics-other/agent-recreate-t.dita" audience="internal" />
+			</topicref>
+		</topicref>
+		<topicref href="topics-other/pulse-enable-t.dita" />
+		<topicref href="topics-other/role-based-access-control-c.dita">
+			<topicref href="topics-other/privileges-permission-r.dita" />
+			<topicref href="topics-other/user-create-t.dita" />
+			<topicref href="topics-other/user-update-t.dita" />
+			<topicref href="topics-other/user-delete-t.dita" />
+			<topicref href="topics-other/user-profile-configure-t.dita" />
+			<topicref href="topics-other/group-rbac-add-t.dita" />
+			<topicref href="topics-other/group-refresh-t.dita" />
+			<topicref href="topics-other/user-role-view-t.dita" />
+			<topicref href="topics-other/role-create-t.dita" />
+			<topicref href="topics-other/role-update-t.dita" />
+			<topicref href="topics-other/role-delete-t.dita" />
+			<topicref href="topics-other/active-directory-access-configure-t.dita" />
+		</topicref>
+		<topicref href="topics-other/entity-sharing-c.dita">
+			<topicref href="topics-other/entity-sharing-policy-r.dita" />
+			<topicref href="topics-other/entity-share-policy-create-t.dita" />
+			<topicref href="topics-other/entity-share-policy-update-t.dita" />
+		</topicref>
+		<topicref href="topics-other/multicluster-management-c.dita">
+			<topicref href="topics-other/multicluster-enable-t.dita" />
+			<topicref href="topics-other/nutanix-cluster-register-t.dita" />
+			<topicref href="topics-other/nutanix-cluster-update-t.dita" />
+			<topicref href="topics-other/vm-affinity-set-t.dita" audience="internal" />
+		</topicref>
+		<topicref href="topics-other/resource-management-c.dita">
+			<topicref href="topics-other/vlan-add-t.dita" />
+			<topicref href="topics-other/vlan-update-t.dita" />
+			<topicref href="topics-other/ip-addresses-to-static-vlans-add-t.dita" />
+			<topicref href="topics-other/static-ip-address-assignment-display-t.dita" />
+			<topicref href="topics-other/stretched-vlan-add-t.dita" />
+			<topicref href="topics-other/stretched-vlan-update-t.dita" />
+			<topicref href="topics-other/ahv-ndb-network-add-t.dita" />
+			<topicref href="topics-other/ntp-server-update-t.dita" />
+			<topicref href="topics-other/dns-server-update-t.dita" />
+			<topicref href="topics-other/time-zone-update-t.dita" />
+			<topicref href="topics-other/proxy-configure-t.dita" />
+		</topicref>
+		<topicref href="topics-other/polling_timeouts_for_apis-r.dita" audience="internal" />
+		<topicref href="topics-other/tag-management-c.dita">
+			<topicref href="topics-other/tags-add-t.dita" />
+			<topicref href="topics-other/tags-update-t.dita" />
+			<topicref href="topics-other/tags-delete-t.dita" />
+		</topicref>
+		<topicref href="topics-other/version-upgrade-c.dita">
+			<topicref href="topics-other/version-one-click-upgrade-t.dita" />
+			<topicref href="topics-other/version-upgrade-cli-t.dita" />
+		</topicref>
+		<topicref href="topics-other/diagnostics-download-t.dita" />
+		<topicref href="topics-other/operation-logs-c.dita">
+			<topicref href="topics-other/operation-logs-view-t.dita" />
+			<topicref href="topics-other/show-logs-page-r.dita" />
+		</topicref>
+		<topicref href="topics-other/maintenance-window-c.dita">
+			<topicref href="topics-other/maintenance-window-create-t.dita" />
+			<topicref href="topics-other/associating-maintenance-window-t.dita" />
+		</topicref>
+		<topicref href="topics-other/operating-system-patch-c.dita">
+			<topicref href="topics-other/operating-system-patching-t.dita" />
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/database-management-c.dita">
+		<topicref href="topics-other/database-update-t.dita" />
+		<topicref href="topics-other/database-remove-t.dita" />
+		<topicref href="topics-other/database-scale-c.dita" />
+		<topicref href="topics-other/dbserver-ip-address-update-t.dita" />
+		<topicref href="topics-other/database-server-remove-t.dita" />
+	</topicref>
+	<topicref href="topics-other/clone-database-management-c.dita">
+		<topicref href="topics-other/database-clone-update-t.dita" />
+		<topicref href="topics-other/database-clone-refresh-t.dita">
+			<topicref href="topics-other/clone-refresh-schedule-t.dita" />
+			<topicref href="topics-other/clone-refresh-schedule-remove-t.dita" />
+		</topicref>
+		<topicref href="topics-other/database-clone-remove-t.dita">
+			<topicref href="topics-other/clone-removal-frequency-schedule-t.dita" />
+			<topicref href="topics-other/clone-removal-schedule-remove-t.dita" />
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/time-machine-management-c.dita">
+		<topicref href="topics-other/time-machine-functionality-c.dita" />
+		<topicref href="topics-other/time-machine-update-t.dita" />
+		<topicref href="topics-other/data-access-management-c.dita">
+			<topicref href="topics-other/time-machine-data-access-add.dita" />
+			<topicref href="topics-other/time-machine-data-access-update-t.dita" />
+		</topicref>
+		<topicref href="topics-other/snapshot-management-c.dita">
+			<topicref href="topics-other/manual-snapshots-create-t.dita" />
+			<topicref href="topics-other/manual-snapshots-replicate-t.dita" />
+			<topicref href="topics-other/sanitized-snapshots-c.dita">
+				<topicref href="topics-other/sanitised-snapshot-create-t.dita" />
+				<topicref href="topics-other/asynchronous-sanitized-snapshot-create-t.dita" />
+			</topicref>
+		</topicref>
+		<topicref href="topics-other/log-catchup-management-c.dita">
+			<topicref href="topics-other/database-log-backup-management-c.dita" />
+			<topicref href="topics-other/log-catchup-perform-t.dita" />
+		</topicref>
+		<topicref href="topics-other/sla-management-c.dita">
+			<topicref href="topics-other/built-in-sla-r.dita" />
+			<topicref href="topics-other/custom-slas-create-t.dita" />
+			<topicref href="topics-other/sla-compare-r.dita" />
+		</topicref>
+		<topicref href="topics-other/database-servers-authorize-t.dita" />
+		<topicref href="topics-other/db-server-vm-deauthorize-t.dita" />
+		<topicref href="topics-other/time-machine-heal-snapshot-c.dita" />
+	</topicref>
+	<topicref href="topics-other/alert-management-c.dita">
+		<topicref href="topics-other/alert-dashboard-t.dita" />
+		<topicref href="topics-other/alert-policies-management-c.dita">
+			<topicref href="topics-other/alert-polices-enable-disable-t.dita" />
+			<topicref href="topics-other/alert-retention-set-t.dita" />
+			<topicref href="topics-other/alerts-resolve-c.dita" audience="internal">
+				<topicref href="topics-other/alert-resolve-all-t.dita" audience="internal" />
+				<topicref href="topics-other/db-alert-resolve-t.dita" audience="internal" />
+				<topicref href="topics-other/tm-alert-resolve-t.dita" audience="internal" />
+			</topicref>
+		</topicref>
+		<topicref href="topics-other/alert-notifications-c.dita">
+			<topicref href="topics-other/alert-notifications-send-t.dita" />
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/security-c.dita">
+		<topicref href="topics-other/ndb-architecture-c.dita" />
+		<topicref href="topics-other/ndb-security-c.dita">
+			<topicref href="topics-other/ndb-accounts-c.dita">
+				<topicref href="topics-other/ndb-user-account-c.dita" />
+				<topicref href="topics-other/ndb-pe-account-c.dita" />
+				<topicref href="topics-other/service-management-accounts-c.dita" />
+				<topicref href="topics-other/mgmt-plane-repo-account-c.dita" />
+				<topicref href="topics-other/ndb-agent-account-c.dita" />
+				<topicref href="topics-other/db-server-vm-account-c.dita" />
+				<topicref href="topics-other/db-instance-account-c.dita" />
+				<topicref href="topics-other/gui-cli-pwd-reset-t.dita" />
+			</topicref>
+			<topicref href="topics-other/authentication-c.dita" />
+			<topicref href="topics-other/network-placement-c.dita" />
+			<topicref href="topics-other/rbac-c.dita" />
+			<topicref href="topics-other/patch-management-c.dita" />
+			<topicref href="topics-other/ssl-authentication-c.dita" />
+			<topicref href="topics-other/security-entity-sharing-c.dita" />
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/utilities-c.dita">
+		<topicref href="topics-other/dbserver-pre-requirement-checks-c.dita">
+			<topicref href="topics-other/pre-requirement-script-cli-download-t.dita" />
+			<topicref href="topics-other/pre-requirement-script-ui-download-t.dita" />
+			<topicref href="topics-other/script-pre-requirement-linux-t.dita" />
+			<topicref href="topics-other/script-ui-download-uninstall-t.dita" />
+		</topicref>
+	</topicref>
+	<topicref href="topics-other/dbms-uninstall-c.dita">
+		<topicref href="topics-other/dbms-uninstall-t.dita" />
+	</topicref>
+	<topicref href="topics-other/ndb-shutdown-c.dita">
+		<topicref href="topics-other/ndb-shutdown-t.dita" />
+	</topicref>
+	<mapref href="../tech-content-tools/required-files/keydefs_topics.ditamap" />
+	<topicgroup>
+		<topicref href="../tech-content-tools/required-files/notices-b.dita" print="printonly" />
+		<topicref href="../tech-content-tools/required-files/ntnx-subjsch.ditamap" format="ditamap"
+			type="subjectScheme" audience="internal" />
+	</topicgroup>
+</map>

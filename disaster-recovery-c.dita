@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//Nutanix//DTD DITA Nutanix Concept//EN" "ntnx-concept.dtd">
+<concept id="disaster-recovery-c">
+  <title><ph conkeyref="ndb_product_info/product_name_short" /> High Availability</title>
+  <conbody>
+    <p> You can enable high availability (HA) for <ph
+        conkeyref="ndb_product_info/product_name_short" /> to ensure that there is no loss on
+      service or data when the <ph conkeyref="ndb_product_info/product_name_short" /> VM fails. </p>
+    <p>As part of enabling HA, <ph conkeyref="ndb_product_info/product_name_short" /> creates a
+      cluster of API server VMs, Repository VMs, and HA proxy VMs. These cluster servers help in
+      securing the system against unexpected failures, planned maintenance, and upgrades. When the
+      primary API server VM or Repository VM goes down, <ph
+        conkeyref="ndb_product_info/product_name_short" /> automatically fails over to a standby
+      VM.</p>
+    <p>See <xref href="service-resiliency-r.dita" /> for information on <ph
+        conkeyref="ndb_product_info/product_name_short" /> HA resiliency.</p>
+    <p>For information on HA resource requirements, see <xref
+        href="vm-configuration-and-scale-r.dita" />.</p>
+    <note><ph conkeyref="ndb_product_info/product_name_short" /> HA is not a disaster recovery
+      solution.</note>
+    <note type="caution">
+      <ul>
+        <li>You cannot cancel or revert the operation to enable <ph
+            conkeyref="ndb_product_info/product_name_short" /> HA once started. Similarly <ph
+            conkeyref="ndb_product_info/product_name_short" /> HA cannot be disabled once enabled. </li>
+        <li>You cannot enable <ph conkeyref="ndb_product_info/product_name_short" /> HA if you have
+          configured network segmentation for <ph conkeyref="ndb_product_info/product_name_short"
+           />. Similarly you cannot configure network segmentation for <ph
+            conkeyref="ndb_product_info/product_name_short" /> if you enable <ph
+            conkeyref="ndb_product_info/product_name_short" /> HA.</li>
+      </ul>
+    </note>
+    <fig>
+      <title>Example: Three Cluster <ph conkeyref="ndb_product_info/product_name_short" /> HA
+        Topology</title>
+      <image href="images/ha-topology-cluster3.png" scale="70">
+        <alt />
+      </image>
+    </fig>
+    <!--<fig><title>Example: Two Cluster <ph conkeyref="ndb_product_info/product_name_short"/> HA Topology</title><image href="images/ha-topology-cluster2.png" scale="70"><alt/></image></fig>-->
+  </conbody>
+</concept>

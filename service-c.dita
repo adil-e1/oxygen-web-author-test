@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//Nutanix//DTD DITA Nutanix Concept//EN" "ntnx-concept.dtd">
+<concept id="nconcept_dgx_jtq_25b">
+  <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Management</title>
+  <shortdesc>You can view information about the <ph conkeyref="ndb_product_info/product_name_short"
+     /> Service VMs, SMTP server and global notification settings, network segmentation
+    configurations, Pulse, and the <ph conkeyref="ndb_product_info/product_name_short" /> service
+    name (IP address of the <ph conkeyref="ndb_product_info/product_name_short" /> instance that is
+    in use). You can also update the existing configurations, and enable high
+    availability.</shortdesc>
+  <conbody>
+    <p>For more information, see <xref href="dr-repository-enable-t.dita" /> for <ph
+        conkeyref="ndb_product_info/product_name_short" />. See <xref
+        href="multicluster-management-c.dita" />) for information on <ph
+        conkeyref="ndb_product_info/product_name_short" /> multi-cluster.</p>
+    <p>The <uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service</uicontrol>
+      page view changes according to features (<ph conkeyref="ndb_product_info/product_name_short"
+       /> High Availability, <ph conkeyref="ndb_product_info/product_name_short" /> Multi-cluster,
+      network segmentation) enabled. The following tables describe the views available.</p>
+    <fig>
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: Default View (when
+          <ph conkeyref="ndb_product_info/product_name_short" /> Multi-cluster, <ph
+          conkeyref="ndb_product_info/product_name_short" /> High Availability, and Network
+        Segmentation are disabled)</title>
+      <image href="images/administration-overview-page.png">
+        <alt />
+      </image>
+    </fig>
+    <table frame="top" rowsep="1">
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page Default View
+        Details</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1*" />
+        <colspec colname="c2" colnum="2" colwidth="1*" />
+        <thead>
+          <row>
+            <entry>Widget</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+                VMs</uicontrol></entry>
+            <entry>Displays the <ph conkeyref="ndb_product_info/product_name_short" /> server VM
+              name, IP address, configured cluster, and the VM type information.</entry>
+          </row>
+          <row>
+            <entry><uicontrol>SMTP Server</uicontrol></entry>
+            <entry>Displays details of the configured SMTP server. For example, address of the
+              server, username, assigned port number, and so on.<p>Click
+                  <uicontrol>Update</uicontrol> to change the existing SMTP configuration or click
+                  <uicontrol>Delete</uicontrol> to remove the existing SMTP configuration.
+              </p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Global Notifications</uicontrol></entry>
+            <entry>Displays details of the configured <ph
+                conkeyref="ndb_product_info/product_name_short" /> global notifications. <p>You can
+                configure global notifications to send alert notifications to one or more email
+                recipients for the following operations.</p><ul>
+                <li><uicontrol>Alerts</uicontrol></li>
+                <li><uicontrol>Failed Operations</uicontrol></li>
+                <li><uicontrol>Successful Operations</uicontrol></li>
+              </ul><note>
+                <ul>
+                  <li>Email notifications will only be sent to the email IDs saved under
+                      <uicontrol>Email Recipients</uicontrol></li>
+                  <li>By default, a Super Admin only receives notifications for their entities or
+                    operations.</li>
+                </ul>
+              </note></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Pulse</uicontrol></entry>
+            <entry>Pulse shares data about your application usage with Nutanix. All data collected
+              is confidential. The information collected is used to help the product team understand
+              how you are using the application and make better decisions about the direction of the
+                product.<p>Click <uicontrol>Update</uicontrol> to enable or disable
+                Pulse.</p><p>Pulse Status:</p><ul>
+                <li><uicontrol>Enabled: Yes or No.</uicontrol>. Indicates whether Pulse data
+                  collection is enabled or not.</li>
+                <li><uicontrol>Connected: Yes or No</uicontrol>. Indicates if the last data upload
+                  to the Nutanix Telemetry service was successful or not. </li>
+              </ul><note>Pulse is enabled by default.</note></entry>
+          </row>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+              </uicontrol></entry>
+            <entry>Displays the current name of the <ph
+                conkeyref="ndb_product_info/product_name_short" /> server.<p>Click <uicontrol>Update
+                  Service Name</uicontrol> to update the <ph
+                  conkeyref="ndb_product_info/product_name_short" /> server name.</p></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <fig>
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: Multi-cluster View
+        (when <ph conkeyref="ndb_product_info/product_name_short" /> Multi-cluster is
+        enabled)</title>
+      <image href="images/administration-overview-page2.png">
+        <alt />
+      </image>
+    </fig>
+    <table frame="top" rowsep="1">
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page Multi-cluster View
+        Details</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1*" />
+        <colspec colname="c2" colnum="2" colwidth="1*" />
+        <thead>
+          <row>
+            <entry>Widget</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+                VMs</uicontrol></entry>
+            <entry>Displays the list of <ph conkeyref="ndb_product_info/product_name_short" />
+              Service VM names, their IP addresses, configured clusters, and VM type
+              information.</entry>
+          </row>
+          <row>
+            <entry><uicontrol>SMTP Server</uicontrol></entry>
+            <entry>Displays details of the configured SMTP server. For example, address of the
+              server, username, assigned port number, and so on.<p>Click
+                  <uicontrol>Update</uicontrol> to change the existing SMTP configuration or click
+                  <uicontrol>Delete</uicontrol> to remove the existing SMTP configuration.
+              </p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Global Notifications</uicontrol></entry>
+            <entry>Displays details of the configured <ph
+                conkeyref="ndb_product_info/product_name_short" /> global notifications. <p>You can
+                configure global notifications to send alert notifications to one or more email
+                recipients for the following operations.</p><ul>
+                <li><uicontrol>Alerts</uicontrol></li>
+                <li><uicontrol>Failed Operations</uicontrol></li>
+                <li><uicontrol>Successful Operations</uicontrol></li>
+              </ul><note>
+                <ul>
+                  <li>Email notifications will only be sent to the email IDs saved under
+                      <uicontrol>Email Recipients</uicontrol></li>
+                  <li>By default, a Super Admin only receives notifications for their entities or
+                    operations.</li>
+                </ul>
+              </note></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Pulse</uicontrol></entry>
+            <entry>Pulse shares data about your application usage with Nutanix. All data collected
+              is confidential. The information collected is used to help the product team understand
+              how you are using the application and make better decisions about the direction of the
+                product.<p>Click <uicontrol>Update</uicontrol> to enable or disable the
+                  Pulse.<note>Pulse is enabled by default.</note></p></entry>
+          </row>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+              </uicontrol></entry>
+            <entry>Displays the current name of the <ph
+                conkeyref="ndb_product_info/product_name_short" /> server.<p>Click <uicontrol>Update
+                  Service Name</uicontrol> to update the <ph
+                  conkeyref="ndb_product_info/product_name_short" /> server name.</p></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <fig>
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: Network
+        Segmentation View (when <ph conkeyref="ndb_product_info/product_name_short" /> Multi-cluster
+        is enabled and Network Segmentation is configured).</title>
+      <image href="images/administration-overview-page3.png">
+        <alt />
+      </image>
+    </fig>
+    <table frame="top" rowsep="1">
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page Network
+        Segmentation View Details</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1*" />
+        <colspec colname="c2" colnum="2" colwidth="1*" />
+        <thead>
+          <row>
+            <entry>Widget</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+                VMs</uicontrol></entry>
+            <entry>Displays the list of <ph conkeyref="ndb_product_info/product_name_short" />
+              Service VM names, their IP addresses, configured clusters, network segmentation, and
+              VM type information.<p>Click <uicontrol>Network Segmentation</uicontrol> to view the
+                current VLAN configurations of the respective cluster.</p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>SMTP Server</uicontrol></entry>
+            <entry>Displays details of the configured SMTP server. For example, address of the
+              server, username, assigned port number, and so on.<p>Click
+                  <uicontrol>Update</uicontrol> to change the existing SMTP configuration or click
+                  <uicontrol>Delete</uicontrol> to remove the existing SMTP configuration.
+              </p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Global Notifications</uicontrol></entry>
+            <entry>Displays details of the configured <ph
+                conkeyref="ndb_product_info/product_name_short" /> global notifications. <p>You can
+                configure global notifications to send alert notifications to one or more email
+                recipients for the following operations.</p><ul>
+                <li><uicontrol>Alerts</uicontrol></li>
+                <li><uicontrol>Failed Operations</uicontrol></li>
+                <li><uicontrol>Successful Operations</uicontrol></li>
+              </ul><note>
+                <ul>
+                  <li>Email notifications will only be sent to the email IDs saved under
+                      <uicontrol>Email Recipients</uicontrol></li>
+                  <li>By default, a Super Admin only receives notifications for their entities or
+                    operations.</li>
+                </ul>
+              </note></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Pulse</uicontrol></entry>
+            <entry>Pulse shares data about your application usage with Nutanix. All data collected
+              is confidential. The information collected is used to help the product team understand
+              how you are using the application and make better decisions about the direction of the
+                product.<p>Click <uicontrol>Update</uicontrol> to enable or disable
+                  Pulse.<note>Pulse is enabled by default.</note></p></entry>
+          </row>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+              </uicontrol></entry>
+            <entry>Displays the current name of the <ph
+                conkeyref="ndb_product_info/product_name_short" /> server.<p>Click <uicontrol>Update
+                  Service Name</uicontrol> to update the <ph
+                  conkeyref="ndb_product_info/product_name_short" /> server name.</p></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: High Availability View
+      (when <ph conkeyref="ndb_product_info/product_name_short" /> Multi-cluster and <ph
+        conkeyref="ndb_product_info/product_name_short" /> High Availability is enabled).</p>
+    <fig>
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: High Availability
+        View - Tabular Format</title>
+      <image href="images/administration-overview-page4.png">
+        <alt />
+      </image>
+    </fig>
+    <fig>
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page: High Availability
+        View - Topology Format</title>
+      <image scale="100" href="images/administration-overview-page5.png">
+        <alt />
+      </image>
+    </fig>
+    <table frame="top" rowsep="1">
+      <title><ph conkeyref="ndb_product_info/product_name_short" /> Service Page High Availability
+        View Details</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1*" />
+        <colspec colname="c2" colnum="2" colwidth="1*" />
+        <thead>
+          <row>
+            <entry>Widget</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+                VMs</uicontrol></entry>
+            <entry>Click the <uicontrol>Table</uicontrol> tab to display the list of <ph
+                conkeyref="ndb_product_info/product_name_short" /> Service VM names, their IP
+              addresses, configured clusters, network segmentation, and VM type information.<p>Click
+                the <uicontrol>Topology</uicontrol> tab to display the topological view of the <ph
+                  conkeyref="ndb_product_info/product_name_short" /> high availability structure
+                consisting of the Nutanix clusters, API Server VMs, Repository VMs, and the HA Proxy
+                VMs.</p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>SMTP Server</uicontrol></entry>
+            <entry>Displays details of the configured SMTP server. For example, address of the
+              server, username, assigned port number, and so on.<p>Click
+                  <uicontrol>Update</uicontrol> to change the existing SMTP configuration or click
+                  <uicontrol>Delete</uicontrol> to remove the existing SMTP configuration.
+              </p></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Global Notifications</uicontrol></entry>
+            <entry>Displays details of the configured <ph
+                conkeyref="ndb_product_info/product_name_short" /> global notifications. <p>You can
+                configure global notifications to send alert notifications to one or more email
+                recipients for the following operations.</p><ul>
+                <li><uicontrol>Alerts</uicontrol></li>
+                <li><uicontrol>Failed Operations</uicontrol></li>
+                <li><uicontrol>Successful Operations</uicontrol></li>
+              </ul><note>
+                <ul>
+                  <li>Email notifications will only be sent to the email IDs saved under
+                      <uicontrol>Email Recipients</uicontrol></li>
+                  <li>By default, a Super Admin only receives notifications for their entities or
+                    operations.</li>
+                </ul>
+              </note></entry>
+          </row>
+          <row>
+            <entry><uicontrol>Pulse</uicontrol></entry>
+            <entry>Pulse shares data about your application usage with Nutanix. All data collected
+              is confidential. The information collected is used to help the product team understand
+              how you are using the application and make better decisions about the direction of the
+                product.<p>Click <uicontrol>Update</uicontrol> to enable or disable
+                  Pulse.<note>Pulse is enabled by default.</note></p></entry>
+          </row>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Service
+              </uicontrol></entry>
+            <entry>Displays the current name of the <ph
+                conkeyref="ndb_product_info/product_name_short" /> server and the assigned <ph
+                conkeyref="ndb_product_info/product_name_short" /> service virtual IP
+                address.<note>The assigned virtual IP address is set as the default IP address of
+                the <ph conkeyref="ndb_product_info/product_name_short" /> server.</note><p>Click
+                  <uicontrol>Update Service Name</uicontrol> to update the <ph
+                  conkeyref="ndb_product_info/product_name_short" /> server name.</p></entry>
+          </row>
+          <row>
+            <entry><uicontrol><ph conkeyref="ndb_product_info/product_name_short" /> Virtual IP
+                Address</uicontrol></entry>
+            <entry>Displays the assigned <ph conkeyref="ndb_product_info/product_name_short" />
+              service virtual IP address when <ph conkeyref="ndb_product_info/product_name_short" />
+              HA is enabled. <note>The assigned virtual IP address is set as the default IP address
+                of the <ph conkeyref="ndb_product_info/product_name_short" /> server.</note></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>
